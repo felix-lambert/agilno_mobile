@@ -11,6 +11,6 @@ export const confirmDeletion = (onConfirm: () => void) => {
 export const showToast = (message: string) => {
   Toast.show(message, {
     duration: Toast.durations.LONG,
-    position: Toast.positions.BOTTOM,
+    position: Toast.positions.TOP,
   });
 };
