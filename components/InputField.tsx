@@ -19,8 +19,6 @@ export const InputField: React.FC<InputFieldProps> = ({ fieldKey, style }) => {
   } = useFormContext<User>();
   const value = watch(fieldKey);
 
-  const id = watch("id");
-
   const containerStyle = useMemo(() => [styles.container, style], [style]);
 
   const handleChangeText = useCallback(

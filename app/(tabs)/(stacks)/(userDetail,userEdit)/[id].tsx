@@ -14,15 +14,15 @@ import { useSelector } from "react-redux";
 import { FieldEditor } from "@/components/FieldEditor";
 import { RootState } from "@/store";
 import { LoadingIndicator } from "@/components/LoadingIndicator";
-
 import { UserEditScreenProps } from "@/types";
+import { FieldEditorProps } from "@/components/FieldEditor";
 
 const UserEditScreen: React.FC<UserEditScreenProps> = ({ segment }) => {
   const { id } = useLocalSearchParams<{ id: string }>();
 
-  const [formReady, setFormReady] = useState(false);
+  const [formReady, setFormReady] = useState<boolean>(false);
 
-  const [isLoading, setIsLoading] = React.useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const router = useRouter();
 
@@ -68,7 +68,7 @@ const UserEditScreen: React.FC<UserEditScreenProps> = ({ segment }) => {
     }
   };
 
-  let fieldComponentToRender;
+  let fieldComponentToRender: React.FC<FieldEditorProps>;
 
   if (segment === "(userDetail)/[id]") {
     fieldComponentToRender = FieldEditor;

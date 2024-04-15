@@ -7,19 +7,16 @@ import { useColorScheme } from "@/hooks/useColorScheme";
 import { useClientOnlyValue } from "@/hooks/useClientOnlyValue";
 import { TabBarItem } from "@/components/TabBarItem";
 
-// Define an enum for color schemes for better type safety and management
 enum ColorScheme {
   Light = "light",
   Dark = "dark",
 }
 
-// Type definition for TabBarIcon props
 interface TabBarIconProps {
   name: React.ComponentProps<typeof FontAwesome>["name"];
   color: string;
 }
 
-// TabBarIcon component with explicit React.FC type
 const TabBarIcon: React.FC<TabBarIconProps> = ({ name, color }) => {
   return (
     <FontAwesome
@@ -31,7 +28,6 @@ const TabBarIcon: React.FC<TabBarIconProps> = ({ name, color }) => {
   );
 };
 
-// TabLayout component using best TypeScript practices
 const TabLayout: React.FC = () => {
   const colorScheme = useColorScheme();
 

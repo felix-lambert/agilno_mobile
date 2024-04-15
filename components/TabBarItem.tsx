@@ -42,11 +42,13 @@ export const TabBarItem: React.FC<TabBarItemProps> = ({
           }
         };
 
+        const color = isFocused ? "#fcb900" : "white";
+
         const icon =
           options.tabBarIcon &&
           options.tabBarIcon({
             focused: isFocused,
-            color: isFocused ? "#673ab7" : "#222",
+            color,
             size: 24,
           });
 
@@ -59,11 +61,7 @@ export const TabBarItem: React.FC<TabBarItemProps> = ({
             style={[styles.tab, { backgroundColor }]}
           >
             {icon}
-            <Text
-              style={[styles.label, { color: isFocused ? "#673ab7" : "#222" }]}
-            >
-              {label}
-            </Text>
+            <Text style={[styles.label, { color }]}>{label}</Text>
           </TouchableOpacity>
         );
       })}

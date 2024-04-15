@@ -1,13 +1,9 @@
 import React from "react";
 import { ScrollView, Keyboard } from "react-native";
-import { useSelector } from "react-redux";
-
 import { useDispatch } from "@/hooks/useDispatch";
 import { FormProvider, SubmitHandler } from "react-hook-form";
-
 import { Container } from "@/components/Themed";
 import { addUser } from "@/states/userSlice";
-import { RootState } from "@/store";
 import { useRouter } from "expo-router";
 import { LabelledInput } from "@/components/LabelledInput";
 import { InputField } from "@/components/InputField";
@@ -15,7 +11,6 @@ import { useFormInit } from "@/hooks/useFormInit";
 import { showToast } from "@/utils/Alerts";
 import { ActivityIndicator } from "react-native";
 import { Button } from "@/components/Themed";
-
 import { User } from "@/types";
 
 const UserAddScreen: React.FC = () => {

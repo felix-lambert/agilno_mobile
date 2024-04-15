@@ -51,6 +51,7 @@ const UserListScreen: React.FC = () => {
       <FlatList
         data={users}
         keyExtractor={(item) => item.id}
+        showsVerticalScrollIndicator={false}
         renderItem={({ item }) => (
           <UserItem
             user={item}

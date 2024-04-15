@@ -6,11 +6,11 @@ import { updateUserField } from "@/states/userSlice";
 import { useDispatch } from "@/hooks/useDispatch";
 
 import { useFormContext } from "react-hook-form";
-import { InputField } from "./InputField";
+import { InputField } from "@/components/InputField";
 import { User } from "@/types";
 import { formStyles } from "@/styles/formStyles";
 
-interface FieldEditorProps {
+export interface FieldEditorProps {
   fieldKey: keyof User;
 }
 
